@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tittle>Scrolling Website | Practice HTML | Made by sami_makes_games</tittle>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">My Logo</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </header>
+        <section class="top" id="top">
+            <img src="img/sun.png" id="sun">
+            <img src="img/mountains.png" id="mountains">
+            <img src="img/back_trees.png" id="back_trees">
+            <h2 id="text">Afternoon</h2>
+            <a href="#" id="btn">See More</a>
+            <img src="img/front_trees.png" id="front_trees">
+        </section>
+        <div class="about" id="about">
+            <h2>About</h2>
+            <p>This a practice of html and css. I want to become a front end developer. I also would like to be a videogame developer.
+                My favorite games are: Genshin Impact, Pokemon and shooter games just like Valorant. 
+                <br><br>
+                This an unteresting text, that says exactly nothing and is here just to fill space.
+                This an unteresting text, that says exactly nothing and is here just to fill space.
+                This an unteresting text, that says exactly nothing and is here just to fill space.
+                This an unteresting text, that says exactly nothing and is here just to fill space.
+            </p>
+        </div>
+        <div class="work" id="work">
+            <h2>Work</h2>
+            <p>I'm just a student, lately I have been doing practices in CORPOELECT. I have worked in C, PHP, Javascript and most recently 
+                Python Tkinter and some of Love2D. I would like to learn more about OOP, Front End tools and languages for game develoment.
+                <br><br>
+                This an unteresting text, that says exactly nothing and is here just to fill space.
+                This an unteresting text, that says exactly nothing and is here just to fill space.
+                This an unteresting text, that says exactly nothing and is here just to fill space.
+                This an unteresting text, that says exactly nothing and is here just to fill space.
+            </p>
+        </div>
+        <div class="contact" id="contact">
+            <h2>Contact</h2>
+            <p>Find Me in places like <a href="https://github.com/Sami-makes-games" class="link">GitHub</a> and <a href="https://www.linkedin.com/in/samiragonzalezch/" class="link">Linkedlin</a>.
+                <br><br>
+                This an unteresting text, that says exactly nothing and is here just to fill space.
+                This an unteresting text, that says exactly nothing and is here just to fill space.
+                This an unteresting text, that says exactly nothing and is here just to fill space.
+                This an unteresting text, that says exactly nothing and is here just to fill space.
+            </p>
+        </div>
+        <footer>
+            <a href="#top" id="back">^</a>
+        </footer>
+        <script>
+            let sun = document.getElementById('sun');
+            let mountains = document.getElementById('mountains');
+            let back_trees= document.getElementById('back_trees');
+            let text= document.getElementById('text');
+            let btn= document.getElementById('btn');
+            let front_trees=document.getElementById('front_treses');
+            let header=document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value=window.scrollY;
+                sun.style.top=value*1.05+'px';
+                mountains.style.top= value* 0.5+'px';
+                back_trees.style.top=value* 0+'px';
+                text.style.marginLeft=value *4 + 'px';
+                btn.style.marginTop=value *1.5 + 'px';
+                header.style.top= value * 0.5+'px';
+
+            })
+        </script>
+    </body>
+</html>
